@@ -186,15 +186,15 @@ export const UPIGenerator = () => {
 
             <div className="space-y-2">
               <Label htmlFor="note" className="text-sm font-medium">
-                Payment Note (Optional)
+                Note <span className="text-muted-foreground font-normal">(optional)</span>
               </Label>
-              <Textarea
+              <Input
                 id="note"
+                type="text"
                 placeholder="Add a note for this payment..."
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
-                className="resize-none"
-                rows={3}
+                className="h-12 text-base"
               />
             </div>
           </div>
