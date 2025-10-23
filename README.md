@@ -1,73 +1,136 @@
-# Welcome to your Lovable project
+# ⚛️ LinkUPI Web Application (UPI LINK GENERATOR)
 
-## Project info
+This project is a modern web application built with React, TypeScript, and a suite of powerful tools and libraries. It provides a robust and scalable foundation for building complex user interfaces with features like routing, data fetching, theming, and UI component libraries. It leverages cutting-edge technologies to deliver a smooth and efficient user experience.
 
-**URL**: https://lovable.dev/projects/680fdf27-cbae-4f18-aa2b-201d73815d32
+🚀 **Key Features:**
 
-## How can I edit this code?
+*   **Component-Based Architecture:** Built with reusable React components for maintainability and scalability.
+*   **Modern UI:** Utilizes Radix UI and Tailwind CSS for a visually appealing and accessible user interface.
+*   **Data Fetching & Caching:** Implements TanStack React Query for efficient data fetching and caching.
+*   **Form Handling:** Uses React Hook Form and Zod for robust form handling and validation.
+*   **Theming:** Supports light and dark themes with `next-themes`.
+*   **Routing:** Implements client-side routing with `react-router-dom`.
+*   **UPI Link Generation:** Includes a component for generating UPI payment links with QR code support.
+*   **Responsive Design:** Adapts to different screen sizes using the `useIsMobile` hook.
+*   **Notification System:** Utilizes `sonner` and custom `Toaster` components for displaying user notifications.
 
-There are several ways of editing your application.
+🛠️ **Tech Stack:**
 
-**Use Lovable**
+| Category      | Technology                      | Description                                                                 |
+|---------------|---------------------------------|-----------------------------------------------------------------------------|
+| **Frontend**  | React                           | JavaScript library for building user interfaces                               |
+|               | TypeScript                      | Superset of JavaScript that adds static typing                                |
+|               | Radix UI                        | Accessible UI components                                                      |
+|               | Tailwind CSS                    | Utility-first CSS framework                                                   |
+|               | React Hook Form                 | Library for form handling in React                                            |
+|               | Zod                             | Schema validation library                                                     |
+|               | TanStack React Query            | Library for data fetching and caching                                         |
+|               | next-themes                     | Library for theming support (light/dark mode)                                 |
+|               | lucide-react                    | Beautifully simple icons                                                     |
+|               | react-router-dom                | Library for routing in React applications                                     |
+|               | clsx                            | Utility for constructing className strings conditionally                       |
+|               | tailwind-merge                | Utility for resolving Tailwind CSS class conflicts                            |
+|               | tailwindcss-animate             | CSS animations for Tailwind CSS                                               |
+|               | sonner                          |  Aesthetic toast notifications                                                |
+|               | vaul                            |  Accessible and unstyled dialog primitives                                     |
+|               | recharts                        |  Composable charting library built on React                                   |
+|               | embla-carousel-react            |  Lightweight carousel component for React                                     |
+|               | qrcode.react                    |  React component for rendering QR codes                                      |
+|               | react-day-picker                |  Date picker component for React                                               |
+|               | react-resizable-panels          |  Resizable panels component for React                                          |
+|               | input-otp                       |  Input component for OTP (One-Time Password)                                 |
+| **Build Tool**| Vite                            | Fast build tool and development server                                        |
+| **Linting**   | ESLint                          | JavaScript linting tool                                                       |
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/680fdf27-cbae-4f18-aa2b-201d73815d32) and start prompting.
+📦 **Getting Started:**
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+*   Node.js (version >= 18)
+*   npm or yarn or pnpm
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1.  Clone the repository:
 
-Follow these steps:
+    ```bash
+    git clone <repository-url>
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2.  Navigate to the project directory:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+    ```bash
+    cd <project-directory>
+    ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3.  Install dependencies:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+    ```bash
+    npm install # or yarn install or pnpm install
+    ```
+
+### Running Locally
+
+1.  Start the development server:
+
+    ```bash
+    npm run dev # or yarn dev or pnpm dev
+    ```
+
+2.  Open your browser and navigate to `http://localhost:8080`.
+
+📂 **Project Structure:**
+
+```
+├── .eslintrc.cjs           # ESLint configuration file
+├── .gitignore              # Specifies intentionally untracked files that Git should ignore
+├── package.json            # Project metadata and dependencies
+├── postcss.config.cjs      # PostCSS configuration file
+├── src
+│   ├── App.tsx             # Main application component
+│   ├── components
+│   │   ├── ui              # Reusable UI components
+│   │   │   ├── button.tsx  # Button component
+│   │   │   ├── card.tsx    # Card component
+│   │   │   ├── input.tsx   # Input component
+│   │   │   ├── label.tsx   # Label component
+│   │   │   ├── switch.tsx  # Switch component
+│   │   │   ├── textarea.tsx# Textarea component
+│   │   │   └── toaster.tsx # Toaster component
+│   │   └── UPIGenerator.tsx# UPI Link Generator Component
+│   ├── hooks
+│   │   └── use-mobile.tsx  # Custom hook to detect mobile devices
+│   ├── lib
+│   │   └── utils.ts        # Utility functions
+│   ├── main.tsx            # Entry point for the React application
+│   ├── pages
+│   │   ├── Index.tsx       # Index page component
+│   │   └── NotFound.tsx    # 404 Not Found page component
+│   ├── index.css           # Global CSS styles
+├── tsconfig.app.json       # TypeScript configuration for the application
+├── tsconfig.json           # Root TypeScript configuration
+├── tsconfig.node.json      # TypeScript configuration for Node.js
+├── vite.config.ts          # Vite configuration file
 ```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+🤝 **Contributing:**
 
-**Use GitHub Codespaces**
+Contributions are welcome! Please follow these steps:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them with clear, concise messages.
+4.  Submit a pull request.
 
-## What technologies are used for this project?
+📝 **License:**
 
-This project is built with:
+This project is licensed under the [MIT License](LICENSE).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+📬 **Contact:**
 
-## How can I deploy this project?
+If you have any questions or suggestions, feel free to contact me at [nishitkirani2020@gmail.com](mailto:nishitkirani2020@gmail.com).
 
-Simply open [Lovable](https://lovable.dev/projects/680fdf27-cbae-4f18-aa2b-201d73815d32) and click on Share -> Publish.
+💖 **Thanks Message:**
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Thank you for checking out this project! I hope it's helpful and inspires you to build amazing things.
