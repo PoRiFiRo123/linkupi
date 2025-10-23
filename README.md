@@ -1,136 +1,172 @@
-# ⚛️ LinkUPI Web Application (UPI LINK GENERATOR)
+# Image to PDF Converter 🖼️➡️📄
 
-This project is a modern web application built with React, TypeScript, and a suite of powerful tools and libraries. It provides a robust and scalable foundation for building complex user interfaces with features like routing, data fetching, theming, and UI component libraries. It leverages cutting-edge technologies to deliver a smooth and efficient user experience.
+A simple tool to convert images to PDF files.
 
-🚀 **Key Features:**
+---
 
-*   **Component-Based Architecture:** Built with reusable React components for maintainability and scalability.
-*   **Modern UI:** Utilizes Radix UI and Tailwind CSS for a visually appealing and accessible user interface.
-*   **Data Fetching & Caching:** Implements TanStack React Query for efficient data fetching and caching.
-*   **Form Handling:** Uses React Hook Form and Zod for robust form handling and validation.
-*   **Theming:** Supports light and dark themes with `next-themes`.
-*   **Routing:** Implements client-side routing with `react-router-dom`.
-*   **UPI Link Generation:** Includes a component for generating UPI payment links with QR code support.
-*   **Responsive Design:** Adapts to different screen sizes using the `useIsMobile` hook.
-*   **Notification System:** Utilizes `sonner` and custom `Toaster` components for displaying user notifications.
+## 📋 Overview
 
-🛠️ **Tech Stack:**
+This project provides a streamlined solution for converting images into PDF documents. It is designed to be user-friendly and efficient, enabling users to quickly transform various image formats into universally compatible PDF files. The application manages user preferences and handles asynchronous operations with type safety.
 
-| Category      | Technology                      | Description                                                                 |
-|---------------|---------------------------------|-----------------------------------------------------------------------------|
-| **Frontend**  | React                           | JavaScript library for building user interfaces                               |
-|               | TypeScript                      | Superset of JavaScript that adds static typing                                |
-|               | Radix UI                        | Accessible UI components                                                      |
-|               | Tailwind CSS                    | Utility-first CSS framework                                                   |
-|               | React Hook Form                 | Library for form handling in React                                            |
-|               | Zod                             | Schema validation library                                                     |
-|               | TanStack React Query            | Library for data fetching and caching                                         |
-|               | next-themes                     | Library for theming support (light/dark mode)                                 |
-|               | lucide-react                    | Beautifully simple icons                                                     |
-|               | react-router-dom                | Library for routing in React applications                                     |
-|               | clsx                            | Utility for constructing className strings conditionally                       |
-|               | tailwind-merge                | Utility for resolving Tailwind CSS class conflicts                            |
-|               | tailwindcss-animate             | CSS animations for Tailwind CSS                                               |
-|               | sonner                          |  Aesthetic toast notifications                                                |
-|               | vaul                            |  Accessible and unstyled dialog primitives                                     |
-|               | recharts                        |  Composable charting library built on React                                   |
-|               | embla-carousel-react            |  Lightweight carousel component for React                                     |
-|               | qrcode.react                    |  React component for rendering QR codes                                      |
-|               | react-day-picker                |  Date picker component for React                                               |
-|               | react-resizable-panels          |  Resizable panels component for React                                          |
-|               | input-otp                       |  Input component for OTP (One-Time Password)                                 |
-| **Build Tool**| Vite                            | Fast build tool and development server                                        |
-| **Linting**   | ESLint                          | JavaScript linting tool                                                       |
+---
 
-📦 **Getting Started:**
+## ✨ Features
+
+*   **Image to PDF Conversion**: 🖼️ Effortlessly convert images into PDF documents with a single click.
+*   **User Preferences**: ⚙️ Customizable settings for API keys and application behavior.
+*   **Asynchronous Operation Status**: 🚦 Real-time feedback on the status of conversions, with clear indications of success or failure.
+*   **File Explorer Integration**: 📂 Automatically reveal downloaded PDF files in the system's file explorer for easy access.
+*   **"Open Now" Filtering**: 🕒 Filter search results or operations based on "Open Now" status, enhancing relevance.
+*   **Prompt Before Download**: 💬 Gives users control over the download process with an "Ask Before Download" setting.
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+
+*   **React**: ⚛️ For building the user interface.
+*   **TypeScript**: 📜 For type-safe development.
+
+**Backend:**
+
+*   *None*: This appears to be a client-side application.
+
+**Utilities:**
+
+*   **Prettier**: ✨ For code formatting.
+*   **ESLint**: 🧐 For code linting.
+
+**Build/Bundling:**
+
+*   *package.json, package-lock.json*: 📦 Dependency Management and Build Scripts
+
+---
+
+## 📂 Project Structure
+
+```
+├── .gitignore
+├── .prettierrc
+├── assets/
+│   ├── command-icon.png
+│   └── extension-icon.png
+├── common/
+│   ├── types.ts
+│   └── utils.ts
+├── eslint.config.js
+├── hook/
+│   └── use-fetch-selected-finder-items.ts
+├── metadata/
+│   └── ilovepdf-1.png
+├── package-lock.json
+├── package.json
+├── src/
+│   ├── image-to-pdf.tsx
+│   └── types.ts
+└── tsconfig.json
+```
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-*   Node.js (version >= 18)
-*   npm or yarn or pnpm
+*   Node.js (v16 or higher)
+*   npm (v8 or higher)
 
 ### Installation
 
 1.  Clone the repository:
 
     ```bash
-    git clone <repository-url>
+    git clone <repository_url>
     ```
 
 2.  Navigate to the project directory:
 
     ```bash
-    cd <project-directory>
+    cd <project_directory>
     ```
 
 3.  Install dependencies:
 
     ```bash
-    npm install # or yarn install or pnpm install
+    npm install
     ```
 
-### Running Locally
+### Configuration
+
+1.  Create a `.env` file in the root directory (if needed based on the application logic).
+
+2.  Add the necessary environment variables. For example, API keys:
+
+    ```
+    APIPublicKey=your_api_public_key
+    APISecretKey=your_api_secret_key
+    ```
+
+### Running the Application
 
 1.  Start the development server:
 
     ```bash
-    npm run dev # or yarn dev or pnpm dev
+    npm start
     ```
 
-2.  Open your browser and navigate to `http://localhost:8080`.
+    Or, if a different script is defined in `package.json`:
 
-📂 **Project Structure:**
+    ```bash
+    npm run dev
+    ```
 
-```
-├── .eslintrc.cjs           # ESLint configuration file
-├── .gitignore              # Specifies intentionally untracked files that Git should ignore
-├── package.json            # Project metadata and dependencies
-├── postcss.config.cjs      # PostCSS configuration file
-├── src
-│   ├── App.tsx             # Main application component
-│   ├── components
-│   │   ├── ui              # Reusable UI components
-│   │   │   ├── button.tsx  # Button component
-│   │   │   ├── card.tsx    # Card component
-│   │   │   ├── input.tsx   # Input component
-│   │   │   ├── label.tsx   # Label component
-│   │   │   ├── switch.tsx  # Switch component
-│   │   │   ├── textarea.tsx# Textarea component
-│   │   │   └── toaster.tsx # Toaster component
-│   │   └── UPIGenerator.tsx# UPI Link Generator Component
-│   ├── hooks
-│   │   └── use-mobile.tsx  # Custom hook to detect mobile devices
-│   ├── lib
-│   │   └── utils.ts        # Utility functions
-│   ├── main.tsx            # Entry point for the React application
-│   ├── pages
-│   │   ├── Index.tsx       # Index page component
-│   │   └── NotFound.tsx    # 404 Not Found page component
-│   ├── index.css           # Global CSS styles
-├── tsconfig.app.json       # TypeScript configuration for the application
-├── tsconfig.json           # Root TypeScript configuration
-├── tsconfig.node.json      # TypeScript configuration for Node.js
-├── vite.config.ts          # Vite configuration file
-```
+---
 
+## 💻 Usage
 
-🤝 **Contributing:**
+The application provides a user interface to convert images to PDFs.
+*Select an image file from your computer.*
+*Click the convert button to generate a PDF.*
+*The PDF will be downloaded to your default downloads folder.*
+*You can configure preferences in the settings menu.*
 
-Contributions are welcome! Please follow these steps:
+---
 
-1.  Fork the repository.
-2.  Create a new branch for your feature or bug fix.
-3.  Make your changes and commit them with clear, concise messages.
-4.  Submit a pull request.
+## 🌐 API Documentation
 
-📝 **License:**
+*No API endpoints are documented in the provided files.*
 
-This project is licensed under the [MIT License](LICENSE).
+---
 
-📬 **Contact:**
+## 📸 Screenshots
 
-If you have any questions or suggestions, feel free to contact me at [nishitkirani2020@gmail.com](mailto:nishitkirani2020@gmail.com).
+*Screenshots showcasing the user interface and conversion process will be added here soon.*
 
-💖 **Thanks Message:**
+---
 
-Thank you for checking out this project! I hope it's helpful and inspires you to build amazing things.
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit pull requests or open issues to suggest improvements or report bugs.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📧 Contact
+
+*Author information is not available.*
+
+---
+
+## 🙏 Acknowledgments
+
+Thanks to everyone who contributes to this project! Your help is greatly appreciated.
+
+---
+
+📝 This README was generated with ❤️ by [readme.ai](https://readme-generator-phi.vercel.app/)https://github.com/PoRiFiRo123/ilovepdf
