@@ -1,172 +1,143 @@
-# Image to PDF Converter 🖼️➡️📄
+# LinkUPI - Instant UPI Payment Link Generator 🚀
 
-A simple tool to convert images to PDF files.
-
----
-
-## 📋 Overview
-
-This project provides a streamlined solution for converting images into PDF documents. It is designed to be user-friendly and efficient, enabling users to quickly transform various image formats into universally compatible PDF files. The application manages user preferences and handles asynchronous operations with type safety.
-
----
+A simple tool to generate UPI payment links and QR codes. No payment gateways required.
 
 ## ✨ Features
 
-*   **Image to PDF Conversion**: 🖼️ Effortlessly convert images into PDF documents with a single click.
-*   **User Preferences**: ⚙️ Customizable settings for API keys and application behavior.
-*   **Asynchronous Operation Status**: 🚦 Real-time feedback on the status of conversions, with clear indications of success or failure.
-*   **File Explorer Integration**: 📂 Automatically reveal downloaded PDF files in the system's file explorer for easy access.
-*   **"Open Now" Filtering**: 🕒 Filter search results or operations based on "Open Now" status, enhancing relevance.
-*   **Prompt Before Download**: 💬 Gives users control over the download process with an "Ask Before Download" setting.
-
----
+- Generate UPI payment links instantly 🔗
+- Create QR codes for easy scanning 📱
+- Supports PhonePe, Google Pay, Paytm, and other UPI apps 💰
+- Optional amount and note fields 📝
+- Copy and share links easily 📤
+- Theme toggle for light/dark mode 🌓
 
 ## 🛠️ Tech Stack
 
-**Frontend:**
+| Category    | Technologies                               |
+| ----------- | ------------------------------------------ |
+| Frontend    | React, TypeScript, Radix UI, Tailwind CSS, Next Themes, Lucide React, QRCode.react |
+| State Management | TanStack React Query |
+| Utilities   | ESLint, Prettier, class-variance-authority, clsx, tailwind-merge, zod |
 
-*   **React**: ⚛️ For building the user interface.
-*   **TypeScript**: 📜 For type-safe development.
+## 📦 Installation & Setup
 
-**Backend:**
+### Prerequisites
 
-*   *None*: This appears to be a client-side application.
+- Node.js (v18 or higher)
+- npm (v8 or higher)
 
-**Utilities:**
+### Installation
 
-*   **Prettier**: ✨ For code formatting.
-*   **ESLint**: 🧐 For code linting.
+1. Clone the repository:
 
-**Build/Bundling:**
+   ```bash
+   git clone <repository_url>
+   ```
 
-*   *package.json, package-lock.json*: 📦 Dependency Management and Build Scripts
+2. Navigate to the project directory:
 
----
+   ```bash
+   cd <project_directory>
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+1. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   This will start the application in development mode. Open your browser and navigate to the address provided by Vite (usually `http://localhost:5173`).
+
+### Building the Application
+
+1. Build the application for production:
+
+   ```bash
+   npm run build
+   ```
+
+   This will create an optimized production build in the `dist` directory.
+
+## 💻 Usage
+
+1.  Enter the UPI ID in the provided field.
+2.  Enter the amount (optional).
+3.  Enter a note (optional).
+4.  Click the "Generate Link" button.
+5.  Copy the generated link or share it directly.
+6.  You can also view and download the QR code.
+
+```typescript
+// Example generated UPI link
+upi://pay?pa=yourname@okaxis&am=100&cu=INR&tn=Payment%20for%20goods
+```
 
 ## 📂 Project Structure
 
 ```
+.
 ├── .gitignore
-├── .prettierrc
-├── assets/
-│   ├── command-icon.png
-│   └── extension-icon.png
-├── common/
-│   ├── types.ts
-│   └── utils.ts
+├── LICENSE
+├── README.md
+├── components.json
 ├── eslint.config.js
-├── hook/
-│   └── use-fetch-selected-finder-items.ts
-├── metadata/
-│   └── ilovepdf-1.png
-├── package-lock.json
+├── index.html
 ├── package.json
-├── src/
-│   ├── image-to-pdf.tsx
-│   └── types.ts
-└── tsconfig.json
+├── postcss.config.js
+├── public
+│   └── robots.txt
+├── src
+│   ├── App.tsx
+│   ├── components
+│   │   ├── ThemeToggle.tsx
+│   │   └── UPIGenerator.tsx
+│   │   └── ui
+│   │       ├── accordion.tsx
+│   │       ├── alert-dialog.tsx
+│   │       ├── alert.tsx
+│   │       ├── aspect-ratio.tsx
+│   │       ├── avatar.tsx
+│   │       ├── badge.tsx
+│   │       └── breadcrumb.tsx
+│   └── main.tsx
+│   └── pages
+│   │   ├── Index.tsx
+│   │   └── NotFound.tsx
+│   └── index.css
+└── tailwind.config.ts
 ```
 
----
+## 📝 API Documentation
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-*   Node.js (v16 or higher)
-*   npm (v8 or higher)
-
-### Installation
-
-1.  Clone the repository:
-
-    ```bash
-    git clone <repository_url>
-    ```
-
-2.  Navigate to the project directory:
-
-    ```bash
-    cd <project_directory>
-    ```
-
-3.  Install dependencies:
-
-    ```bash
-    npm install
-    ```
-
-### Configuration
-
-1.  Create a `.env` file in the root directory (if needed based on the application logic).
-
-2.  Add the necessary environment variables. For example, API keys:
-
-    ```
-    APIPublicKey=your_api_public_key
-    APISecretKey=your_api_secret_key
-    ```
-
-### Running the Application
-
-1.  Start the development server:
-
-    ```bash
-    npm start
-    ```
-
-    Or, if a different script is defined in `package.json`:
-
-    ```bash
-    npm run dev
-    ```
-
----
-
-## 💻 Usage
-
-The application provides a user interface to convert images to PDFs.
-*Select an image file from your computer.*
-*Click the convert button to generate a PDF.*
-*The PDF will be downloaded to your default downloads folder.*
-*You can configure preferences in the settings menu.*
-
----
-
-## 🌐 API Documentation
-
-*No API endpoints are documented in the provided files.*
-
----
+This project is a client-side application and does not have any backend API endpoints.  All logic is handled in the browser.
 
 ## 📸 Screenshots
 
-*Screenshots showcasing the user interface and conversion process will be added here soon.*
+<img width="875" height="787" alt="image" src="https://github.com/user-attachments/assets/fb302bec-cead-4b5a-a37d-3468301fb76e" />
 
----
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues to suggest improvements or report bugs.
 
----
-
-## 📄 License
+## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
 ## 📧 Contact
 
-*Author information is not available.*
-
----
+Copyright (c) 2025 Nishit R Kirani
 
 ## 🙏 Acknowledgments
 
 Thanks to everyone who contributes to this project! Your help is greatly appreciated.
 
----
-
-📝 This README was generated with ❤️ by [readme.ai](https://readme-generator-phi.vercel.app/)https://github.com/PoRiFiRo123/ilovepdf
+This README was generated using [GitRead](https://git-read.vercel.app)
